@@ -1,13 +1,13 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 // import axios from 'axios';
 
 // set action constants
-export const FETCH_MISSIONS = "fetch_missions";
-export const BOOK_MISSION = "book_mission";
-export const CANCEL_MISSION = "cancel_mission";
+export const FETCH_MISSIONS = 'fetch_missions';
+export const BOOK_MISSION = 'book_mission';
+export const CANCEL_MISSION = 'cancel_mission';
 
 // set api url
-const url = "https://api.spacexdata.com/v3/missions";
+const url = 'https://api.spacexdata.com/v3/missions';
 
 export const fetchMissions = createAsyncThunk(FETCH_MISSIONS, async () => {
   const res = await fetch(url);

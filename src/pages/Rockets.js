@@ -26,8 +26,8 @@ const Rockets = () => {
 
   return (
     <div className="container pt-2 pb-5">
-      {rockets &&
-        rockets.map((rocket) => (
+      {rockets
+        && rockets.map((rocket) => (
           <div key={rocket.id} className="row mb-4">
             <div className="col-md-3">
               <img
@@ -37,14 +37,19 @@ const Rockets = () => {
               />
             </div>
             <div className="col-md-9">
-              <h5>{rocket.rocket_name} </h5>
+              <h5>
+                {rocket.rocket_name}
+                {' '}
+              </h5>
               <p>
                 {' '}
                 {rocket.reserved && (
                   <span className="badge bg-success">Reserved</span>
-                )}{' '}
+                )}
+                {' '}
                 {rocket.description}
-              </p>{' '}
+              </p>
+              {' '}
               {rocket.reserved && (
                 <button
                   onClick={() => cancelRocket(rocket.id)}

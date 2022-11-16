@@ -19,7 +19,9 @@ const NavBar = () => {
       <div style={{ width: '50%' }} className="nav-left-wrapper">
         <div className="fs-3">
           <NavLink className="link-item brand mx-auto" to="/">
-            <img height="40" width="50" src="planet.png" alt="LOGO" /> Space
+            <img height="40" width="50" src="planet.png" alt="LOGO" />
+            {' '}
+            Space
             Traveler's Hub
           </NavLink>
         </div>
@@ -30,7 +32,7 @@ const NavBar = () => {
       >
         {links.map((link) => (
           <li key={link.id}>
-            <NavLink className={`link-item`} to={link.path}>
+            <NavLink className="link-item" to={link.path}>
               {link.text}
             </NavLink>
           </li>

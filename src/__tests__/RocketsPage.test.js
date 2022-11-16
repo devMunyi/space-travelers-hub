@@ -7,9 +7,7 @@ import Rockets from '../pages/Rockets';
 // import { Provider } from 'react-redux';
 
 const server = setupServer(
-  rest.get('/url', (req, res, ctx) => {
-    return res(ctx.json([{ id: 1, rocket_name: 'Falcon 1' }]));
-  })
+  rest.get('/url', (req, res, ctx) => res(ctx.json([{ id: 1, rocket_name: 'Falcon 1' }]))),
 );
 
 beforeAll(() => server.listen());
@@ -28,7 +26,5 @@ describe('Rockets Page', () => {
 
     // ASSERT
     expect(text).toHaveTextContent('Falcon 1');
-
-    // expect(rocketsText).toMatchSnapshot();
   });
 });

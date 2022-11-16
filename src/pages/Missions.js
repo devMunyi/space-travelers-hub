@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import Table from "react-bootstrap/Table";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react';
+import Table from 'react-bootstrap/Table';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchMissions,
   bookedMission,
   cancelledMission,
-} from "../redux/mission/missions";
+} from '../redux/mission/missions';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -37,25 +37,28 @@ const Missions = () => {
         {missions.map((mission) => (
           <tr key={mission.mission_id}>
             <td>{mission.mission_name}</td>
-            <td>{mission.description.slice(0, 200)}...</td>
+            <td>
+              {mission.description.slice(0, 200)}
+              ...
+            </td>
             <td>
               <p
                 style={{
-                  background: mission.reserved ? "blue" : "gray",
-                  color: mission.reserved ? "white" : "white",
+                  background: mission.reserved ? 'blue' : 'gray',
+                  color: mission.reserved ? 'white' : 'white',
                 }}
-                className='active rounded p-2'
+                className="active rounded p-2"
               >
-                {mission.reserved ? "Active Member" : "NOT A MEMBER"}
+                {mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
               </p>
             </td>
             <td>
               {mission.reserved && (
                 <button
-                  style={{ border: "red 1px solid", color: "red" }}
+                  style={{ border: 'red 1px solid', color: 'red' }}
                   onClick={() => handleCancelMission(mission.mission_id)}
-                  type='button'
-                  className='btn btn-sm btn-outline-secondary rounded p-2'
+                  type="button"
+                  className="btn btn-sm btn-outline-secondary rounded p-2"
                 >
                   Leave mission
                 </button>
@@ -63,8 +66,8 @@ const Missions = () => {
               {!mission.reserved && (
                 <button
                   onClick={() => handleBookMission(mission.mission_id)}
-                  type='button'
-                  className='btn btn-sm btn-primary rounded p-2'
+                  type="button"
+                  className="btn btn-sm btn-primary rounded p-2"
                 >
                   Join mission
                 </button>
