@@ -25,7 +25,7 @@ const Missions = () => {
   };
 
   return (
-    <Table striped bordered hover>
+    <Table className="container" striped bordered hover>
       <thead>
         <tr>
           <th>Description</th>
