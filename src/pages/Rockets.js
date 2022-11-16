@@ -4,7 +4,7 @@ import {
   fetchRockets,
   bookedRocket,
   cancelledRocket,
-} from '../Redux/actions/rockets';
+} from '../redux/actions/rockets';
 
 const Rockets = () => {
   // set dispatch
