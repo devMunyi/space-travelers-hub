@@ -2,14 +2,14 @@
 
 # Project Name
 
-> Description the project.
+> The application allow users to book rockets and join selected space missions.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Major languages: HTML, CSS, JavaScript
+- Frameworks: ReactJs, Bootstrap
+- Technologies used: Redux, React Redux, Redux Toolkit, REST API
 
 ## Live Demo (if available)
 
@@ -18,39 +18,25 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get a local copy up and running follow these simple example steps:
 
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Open your terminal or command line
+- Run `git clone https://github.com/devMunyi/space-travelers-hub` to have a copy on your computer
+- After the clone, type in the command `cd space-travelers-hub` to access the directory on the terminal
+- run `npm install` to install depencencies.
+- Run `npm run start` and it will load a live server in http://localhost:3000/
 
 ## Authors
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Samuel Munyi**
+- GitHub: [@githubhandle](https://github.com/devMunyi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/samuel-munyi-01315b174/)
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Maxwell011)
+- Twitter: [@twitterhandle](https://twitter.com/pr0mzzy)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/chukwuemeka-orji-50b766241/)
 
 ## 🤝 Contributing
 

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should render navbar correctly 1`] = `
+<a
+  aria-current="page"
+  class="link-item active"
+  href="/"
+>
+  Rockets
+</a>
+`;
+
+exports[`Navbar should render navbar correctly 2`] = `
+<a
+  class="link-item"
+  href="/missions"
+>
+  Missions
+</a>
+`;
