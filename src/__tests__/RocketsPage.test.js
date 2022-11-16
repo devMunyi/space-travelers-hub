@@ -22,8 +22,6 @@ describe('Rockets Page', () => {
     // ACT
     const text = screen.findByRole('heading');
 
-    console.log('Texts Found => ', text);
-
     // ASSERT
     expect(text).toHaveTextContent('Falcon 1');
   });

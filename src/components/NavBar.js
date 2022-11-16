@@ -22,7 +22,7 @@ const NavBar = () => {
             <img height="40" width="50" src="planet.png" alt="LOGO" />
             {' '}
             Space
-            Traveler's Hub
+            Traveler&apos;s Hub
           </NavLink>
         </div>
       </div>
