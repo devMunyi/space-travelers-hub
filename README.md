@@ -4,7 +4,6 @@
 
 > The application allow users to book rockets and join selected space missions.
 
-
 ## Built With
 
 - Major languages: HTML, CSS, JavaScript
@@ -15,7 +14,6 @@
 
 [Live Demo Link](https://livedemo.com)
 
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps:
@@ -23,19 +21,19 @@ To get a local copy up and running follow these simple example steps:
 - Open your terminal or command line
 - Run `git clone https://github.com/devMunyi/space-travelers-hub` to have a copy on your computer
 - After the clone, type in the command `cd space-travelers-hub` to access the directory on the terminal
-- run `npm install` to install depencencies.
+- run `npm install` to install dependencies.
 - Run `npm run start` and it will load a live server in http://localhost:3000/
 
 ## Authors
 
 👤 **Samuel Munyi**
+
 - GitHub: [@githubhandle](https://github.com/devMunyi)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/samuel-munyi-01315b174/)
 
-👤 **Author2**
+👤 **ORJI MAXWELL**
 
 - GitHub: [@githubhandle](https://github.com/Maxwell011)
-- Twitter: [@twitterhandle](https://twitter.com/pr0mzzy)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/chukwuemeka-orji-50b766241/)
 
 ## 🤝 Contributing
