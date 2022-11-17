@@ -42,23 +42,19 @@ const Missions = () => {
               ...
             </td>
             <td>
-              <span
-                style={{
-                  background: mission.reserved ? 'blue' : 'gray',
-                  color: mission.reserved ? 'white' : 'white',
-                }}
-                className="active badge bg-secondary p-2"
-              >
-                {mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
-              </span>
+              {mission.reserved && (
+                <span className="badge bg-success p-2">Active Member</span>
+              )}
+              {!mission.reserved && (
+                <span className="badge bg-secondary p-2">NOT A MEMBER</span>
+              )}
             </td>
-            <td>
+            <td style={{ width: '130px' }}>
               {mission.reserved && (
                 <button
-                  style={{ border: 'red 1px solid', color: 'red' }}
                   onClick={() => handleCancelMission(mission.mission_id)}
                   type="button"
-                  className="btn btn-sm btn-outline-secondary rounded p-2"
+                  className="btn btn-sm btn-outline-danger"
                 >
                   Leave mission
                 </button>
