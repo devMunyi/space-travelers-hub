@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import store from '../redux/store';
 import { MemoryRouter as Router } from 'react-router-dom';
+import store from '../redux/store';
 import NavBar from '../components/NavBar';
 
 it('renders correctly', () => {
@@ -12,7 +12,7 @@ it('renders correctly', () => {
         <Router>
           <NavBar />
         </Router>
-      </Provider>
+      </Provider>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

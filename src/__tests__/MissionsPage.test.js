@@ -10,7 +10,7 @@ it('renders Component correctly', () => {
     .create(
       <Provider store={store}>
         <Missions />
-      </Provider>
+      </Provider>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

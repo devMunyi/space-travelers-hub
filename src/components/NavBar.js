@@ -36,7 +36,9 @@ const NavBar = () => {
       <div style={{ width: '50%' }} className="nav-left-wrapper">
         <div className="fs-3">
           <NavLink className="link-item brand mx-auto" to="/">
-            <img height="40" width="50" src="planet.png" alt="LOGO" /> Space
+            <img height="40" width="50" src="planet.png" alt="LOGO" />
+            {' '}
+            Space
             Traveler&apos;s Hub
           </NavLink>
         </div>
