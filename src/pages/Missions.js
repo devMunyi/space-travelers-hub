@@ -64,7 +64,7 @@ const Missions = () => {
                 <button
                   onClick={() => handleBookMission(mission.mission_id)}
                   type="button"
-                  className="btn btn-sm btn-primary rounded p-2"
+                  className="btn btn-sm btn-outline-secondary"
                 >
                   Join mission
                 </button>
