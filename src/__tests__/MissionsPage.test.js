@@ -1,14 +1,16 @@
 import React from 'react';
+import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import store from '../redux/store';
-import Rockets from '../pages/Rockets';
+import Missions from '../pages/Missions';
 
 it('renders Component correctly', () => {
   const tree = renderer.create(
     <Provider store={store}>
-      <Rockets />
+      <Missions />
     </Provider>,
-  );
+  )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
