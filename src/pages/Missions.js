@@ -42,15 +42,15 @@ const Missions = () => {
               ...
             </td>
             <td>
-              <p
+              <span
                 style={{
                   background: mission.reserved ? 'blue' : 'gray',
                   color: mission.reserved ? 'white' : 'white',
                 }}
-                className="active rounded p-2"
+                className="active badge bg-secondary p-2"
               >
                 {mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
-              </p>
+              </span>
             </td>
             <td>
               {mission.reserved && (
