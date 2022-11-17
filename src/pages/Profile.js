@@ -39,15 +39,6 @@ const Profile = () => {
                   <td>{mission.mission_name}</td>
                 </tr>
               ))}
-              {/* <tr>
-                <td>Mark</td>
-              </tr>
-              <tr>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>the Bird</td>
-              </tr> */}
             </tbody>
           </table>
         </div>
