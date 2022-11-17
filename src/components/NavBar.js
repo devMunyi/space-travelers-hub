@@ -1,6 +1,23 @@
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchRockets } from '../redux/actions/rockets';
+import { fetchMissions } from '../redux/mission/missions';
 
 const NavBar = () => {
+  // set dispatch
+  const dispatch = useDispatch();
+
+  // fetch rockets on component mount
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, [dispatch]);
+
+  // fetch rockets on component mount
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, [dispatch]);
+
   const links = [
     { id: 1, path: '/', text: 'Rockets' },
     { id: 2, path: '/missions', text: 'Missions' },
@@ -19,9 +36,7 @@ const NavBar = () => {
       <div style={{ width: '50%' }} className="nav-left-wrapper">
         <div className="fs-3">
           <NavLink className="link-item brand mx-auto" to="/">
-            <img height="40" width="50" src="planet.png" alt="LOGO" />
-            {' '}
-            Space
+            <img height="40" width="50" src="planet.png" alt="LOGO" /> Space
             Traveler&apos;s Hub
           </NavLink>
         </div>

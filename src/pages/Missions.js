@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  fetchMissions,
-  bookedMission,
-  cancelledMission,
-} from '../redux/mission/missions';
+import { bookedMission, cancelledMission } from '../redux/mission/missions';
 
 const Missions = () => {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
 
   const missions = useSelector((state) => state.missions);
 

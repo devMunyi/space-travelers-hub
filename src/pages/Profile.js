@@ -1,27 +1,13 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../redux/actions/rockets';
-import { fetchMissions } from '../redux/mission/missions';
+import { useSelector } from 'react-redux';
 
 const Profile = () => {
-  // set dispatch
-  const dispatch = useDispatch();
-
-  // fetch rockets on page mount
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
-
-  // fetch missions on page mount
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
-
   // retrieve rockets from store for rendering
-  const rockets = useSelector((state) => state.rockets);
+  let rockets = useSelector((state) => state.rockets);
+  rockets = rockets.filter((rocket) => rocket.reserved === true);
 
   // retrieve missions from store for rendering
-  const missions = useSelector((state) => state.missions);
+  let missions = useSelector((state) => state.missions);
+  missions = missions.filter((mission) => mission.reserved === true);
 
   return (
     <div className="container">
@@ -29,7 +15,7 @@ const Profile = () => {
         <div className="col-md-6">
           <table className="table table-bordered">
             <thead>
-              <tr>
+              <tr key="th1">
                 <th scope="col">My Missions</th>
               </tr>
             </thead>
@@ -45,7 +31,7 @@ const Profile = () => {
         <div className="col-md-6">
           <table className="table table-bordered">
             <thead>
-              <tr>
+              <tr key="th2">
                 <th scope="col">My Rockets</th>
               </tr>
             </thead>

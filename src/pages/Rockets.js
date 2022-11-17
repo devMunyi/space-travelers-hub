@@ -1,19 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  fetchRockets,
-  bookedRocket,
-  cancelledRocket,
-} from '../redux/actions/rockets';
+import { useSelector, useDispatch } from 'react-redux';
+import { bookedRocket, cancelledRocket } from '../redux/actions/rockets';
 
 const Rockets = () => {
   // set dispatch
   const dispatch = useDispatch();
-
-  // fetch rockets on page mount
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
 
   // retrieve rockets from store for rendering
   const rockets = useSelector((state) => state.rockets);
