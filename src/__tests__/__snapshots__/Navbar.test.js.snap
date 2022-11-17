@@ -18,3 +18,80 @@ exports[`Navbar should render navbar correctly 2`] = `
   Missions
 </a>
 `;
+
+exports[`renders correctly 1`] = `
+<nav
+  className="mb-2 d-flex justify-content-between align-items-center container-fluid border-bottom"
+  style={
+    Object {
+      "backgroundColor": "#fff",
+    }
+  }
+>
+  <div
+    className="nav-left-wrapper"
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    <div
+      className="fs-3"
+    >
+      <a
+        aria-current="page"
+        className="link-item brand mx-auto active"
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="LOGO"
+          height="40"
+          src="planet.png"
+          width="50"
+        />
+         
+        Space Traveler's Hub
+      </a>
+    </div>
+  </div>
+  <ul
+    className="nav d-flex justify-content-around fs-6"
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    <li>
+      <a
+        aria-current="page"
+        className="link-item active"
+        href="/"
+        onClick={[Function]}
+      >
+        Rockets
+      </a>
+    </li>
+    <li>
+      <a
+        className="link-item"
+        href="/missions"
+        onClick={[Function]}
+      >
+        Missions
+      </a>
+    </li>
+    <li>
+      <a
+        className="link-item"
+        href="/profile"
+        onClick={[Function]}
+      >
+        Profile
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
