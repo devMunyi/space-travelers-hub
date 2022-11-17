@@ -2,12 +2,10 @@ import { useSelector } from 'react-redux';
 
 const Profile = () => {
   // retrieve rockets from store for rendering
-  let rockets = useSelector((state) => state.rockets);
-  rockets = rockets.filter((rocket) => rocket.reserved === true);
+  const rockets = useSelector((state) => state.rockets);
 
   // retrieve missions from store for rendering
-  let missions = useSelector((state) => state.missions);
-  missions = missions.filter((mission) => mission.reserved === true);
+  const missions = useSelector((state) => state.missions);
 
   return (
     <div className="container">
@@ -20,11 +18,13 @@ const Profile = () => {
               </tr>
             </thead>
             <tbody>
-              {missions.map((mission) => (
-                <tr key={mission.id}>
-                  <td>{mission.mission_name}</td>
-                </tr>
-              ))}
+              {missions
+                .filter(({ reserved }) => reserved === true)
+                .map((mission) => (
+                  <tr key={mission.id}>
+                    <td>{mission.mission_name}</td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
@@ -36,11 +36,13 @@ const Profile = () => {
               </tr>
             </thead>
             <tbody>
-              {rockets.map((rocket) => (
-                <tr key={rocket.id}>
-                  <td>{rocket.rocket_name}</td>
-                </tr>
-              ))}
+              {rockets
+                .filter(({ reserved }) => reserved === true)
+                .map((rocket) => (
+                  <tr key={rocket.id}>
+                    <td>{rocket.rocket_name}</td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
