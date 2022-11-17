@@ -28,6 +28,7 @@ const Missions = () => {
     <Table className="container" striped bordered hover>
       <thead>
         <tr>
+          <th>Name</th>
           <th>Description</th>
           <th>Status</th>
           <th>Action</th>
